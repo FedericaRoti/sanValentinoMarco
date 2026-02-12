@@ -1,0 +1,86 @@
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background-color: #ffe6e6;
+}
+
+img{
+    max-width: 90%;
+    width: 300px;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 1.5rem;
+    display: block;
+}
+
+h1{
+    font-size: clamp(1.4rem, 4vw, 2.2rem);
+    margin: 0.2em 0;
+}
+
+h3{
+    font-size: clamp(1rem, 3.5vw, 1.4rem);
+    margin: 0.2em 0;
+}
+
+.option-choice{
+    display: flex;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.yes-button, .no-button{
+    padding: 15px 25px;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    background-color: lightgray;
+}
+
+.small{
+    transform: scale(0.7);
+    background-color: #484343;
+}
+
+
+.big{
+    transform: scale(1.2);
+    animation: pulse 0.5s infinite;
+    background-color: #f73232;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1.2); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1.2); }
+}
+
+@media (max-width: 480px) {
+    .option-choice{
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .yes-button, .no-button{      
+        padding: 12px;
+        font-size: 16px;
+        margin: 0 20px 0 20px;
+    }
+
+    img{
+        width: 80%;
+    }
+}
